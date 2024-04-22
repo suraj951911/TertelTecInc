@@ -172,11 +172,48 @@ body{
     font-size: 3rem;
     display: none;
 }
+#hello123{
+    position: relative;
+    color: white;
+    
+}
+.typewriter {
+    overflow: hidden; /* Ensures text doesn't overflow outside the container */
+ /* Cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    color: white;
+    font-size: 4.1rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+/* Optional: Cursor blinking effect */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typewriter::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: inline-block;
+    width: 0;
+    animation: blink 0.7s infinite;
+}
+.w1{
+    position: absolute;
+    object-fit: fit;
+    display: flex; /* Position the video fixed to the viewport */
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width of the viewport */
+        height: 100%; /* Full height of the viewport */
+        object-fit: cover; /* Maintain aspect ratio and cover the viewport */
+}
 
 .home{
     min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/img1.jpg);
+    width: 100vw; 
+    background-color: black;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -184,7 +221,6 @@ body{
     flex-flow: column;
     text-align: center;
     padding: 0 1rem;
-    position: relative;
     overflow: hidden !important;
 }
 

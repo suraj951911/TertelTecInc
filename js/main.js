@@ -75,3 +75,29 @@ $('.accordion-header').click(function(){
 });
 
 });
+
+const text = "WELCOME TO TERTLETEC INC";
+let index = 0;
+const speed = 50; // Typing speed in milliseconds
+
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById('typewriter-text').textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+// Trigger the typewriter effect when the page is loaded
+window.setInterval(() => {
+    index=0;
+    document.getElementById('typewriter-text').textContent ="";
+    typeWriter();
+    
+}, 4000);
+
+
+
+
+
+
